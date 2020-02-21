@@ -33,6 +33,17 @@ class Order:
             + self.notes  + "," \
             + self.shipping_method
     
+    def get_simple_info(self):
+        return self.order_id + "\t" \
+            + self.shipping_name
+    
+    def get_formatted_info(self):
+        return "\nOrder ID: \t\t" + self.order_id \
+            + "\nMethod: \t\t" + self.shipping_method \
+            + "\nName: \t\t" + self.shipping_name \
+            + "\nPhone: \t\t" + self.phone \
+            + "\nNotes: \t\t" + self.notes
+    
     def get_shipping_method(self):
         return self.shipping_method
 
